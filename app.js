@@ -1,9 +1,5 @@
 var DirectiveMadness = angular.module('DirectiveMadness', []);
 
-DirectiveMadness.controller('MadnessCtrl', ['$scope', function ($scope) {
-
-}]);
-
 DirectiveMadness.directive('mainNav', function () {
 	return {
 		templateUrl: "directive/mainNav.html",
