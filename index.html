@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="DirectiveMadness">
+  <head>
+    <meta charset="utf-8">
+    <title>Directive Madness</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="MadnessCtrl">
+    <main-nav></main-nav>
+    <radios-form></radios-form>
+    <main-header>I am h1 header</main-header>
+    <h2 colorize color="red" background="blue">I should be red and background should be blue</h2>
+    <p ng-mousedown="mouseState = 'DOWN'" ng-mouseup="mouseState = 'UP'">
+      Mouse is : {{ mouseState }}
+    </p>
+    <p ng-mouseenter="hoverState = 'OVER'" ng-mouseleave="hoverState = 'LEAVE'">
+      Hover state : {{ hoverState }}
+    </p>
+    <button type="button" name="button" ng-dblclick="doubleState='double'">I'm {{ doubleState }} clickable</button>
+    <copyright></copyright>
+  </body>
+</html>

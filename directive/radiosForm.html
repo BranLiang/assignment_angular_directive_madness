@@ -1,0 +1,11 @@
+<form>
+  <p ng-if="radioValue === undefined">No number is selected</p>
+  <p ng-hide="radioValue % 2 === 1">Select Number is even</p>
+  <p ng-hide="radioValue % 2 === 0">Select Number is odd</p>
+  <p>Current selected number {{ radioValue }}</p>
+  <input ng-model="radioValue" type="radio" name="name" value="1">
+  <input ng-model="radioValue" type="radio" name="name" value="2">
+  <input ng-model="radioValue" type="radio" name="name" value="3">
+  <input ng-model="radioValue" type="radio" name="name" value="4">
+  <input ng-model="radioValue" type="radio" name="name" value="5">
+</form>
