@@ -19,7 +19,7 @@ QuotosApp.directive('quotoForm', function () {
 	return {
 		restrict: "E",
 		templateUrl: "directive/quotoForm.html",
-		scope: true;
+		scope: true,
 	};
 });
 
