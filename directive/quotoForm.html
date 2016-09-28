@@ -1,11 +1,17 @@
-<form>
+<form name="quotoForm">
   Message:
   <br>
-  <input type="text" name="message" value="" ng-model="quotoMessage">
+  <input type="text" name="message" value="" ng-model="quotoParams.message" ng-minlength="2">
+  <p ng-show="quotoForm.message.$invalid || quotoForm.message.$pristine">
+    The message is too short or empty, minimum 2 characters.
+  </p>
   <br>
   Author
   <br>
-  <input type="text" name="author" value="" ng-model="quotoAuthor">
+  <input type="text" name="author" value="" ng-model="quotoParams.author" ng-maxlength="32">
+  <p ng-show="quotoForm.author.$invalid || quotoForm.author.$pristine">
+    The author name is too long or empty, maxmum 32 characters.
+  </p>
   <br>
-  <button type="button" name="button" ng-click="createQuoto()">Create</button>
+  <button type="button" name="button" ng-click="createQuoto(quotoForm.$valid, quotoForm)" ng-hide="quotoForm.$invalid">Create</button>
 </form>

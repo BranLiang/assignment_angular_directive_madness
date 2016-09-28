@@ -1,14 +1,19 @@
-<table>
+<p ng-if="quotos.length === 0">
+  There is no quotos yet.
+</p>
+<table ng-if="quotos.length > 0">
   <thead>
     <tr>
       <td>Author</td>
       <td>Message</td>
+      <td>Delete</td>
     </tr>
   </thead>
   <tbody>
     <tr ng-repeat="quoto in quotos">
       <td>{{ quoto.author }}</td>
       <td>{{ quoto.message }}</td>
+      <td><button type="button" name="button" ng-click="deleteQuoto(quoto)">Delete</button></td>
     </tr>
   </tbody>
 </table>
